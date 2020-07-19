@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jira Board</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="board">
+      <div role="backlog" class="b-col">
+        <div class="board-title">Backlog</div>
+      </div>
+      <div role="todo" class="b-col">
+        <div class="board-title">To Do</div>
+      </div>
+      <div role="doing" class="b-col">
+        <div class="board-title">Doing</div>
+      </div>
+      <div role="done" class="b-col">
+        <div class="board-title">Done</div>
+      </div>
+    </div>
+    <div class="create-task" role="createTask">+</div>
+    <div role="overlay" class="overlay hide"></div>
+    <div role="task" class="task-pop hide">
+      <div class="task-p-container">
+        <div class="close-pop" role="closePopup">x</div>
+        <div class="tp-c">
+          <label for="title">Title</label>
+          <input
+            role="title"
+            type="text"
+            name="title"
+            value=""
+            placeholder="Title"
+          />
+        </div>
+        <div class="tp-c">
+          <label for="desc">Description</label>
+          <input
+            role="desc"
+            type="area"
+            name="desc"
+            value=""
+            placeholder="Description"
+          />
+        </div>
+        <div class="tp-c">
+          <label for="options">Add To</label>
+          <select role="addTo">
+            <option selected value="backlog">Backlog</option>
+            <option value="todo">To Do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <button class="btn-p" role="addTask">Add Task</button>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
